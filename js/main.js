@@ -14,7 +14,7 @@ var createAds = function () {
   ];
 
   var OFFER_TYPE = {
-      palace: 'Дворец',
+    palace: 'Дворец',
     flat: 'Квартира',
     house: 'Дом',
     bungalo: 'Бунгало'
