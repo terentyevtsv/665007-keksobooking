@@ -228,7 +228,7 @@ var renderCard = function (advertisments) {
   return cardElement;
 };
 
-var map = document.querySelector(".map");
+/*
 var pinContainer = map.querySelector(".map__pins");
 var mapFiltersContainer = map.querySelector(".map__filters-container");
 
@@ -238,4 +238,22 @@ map.insertBefore(
     getRandomUp(OFFER_QUANTITY)]),
   mapFiltersContainer);
 
-map.classList.remove("map--faded");
+map.classList.remove("map--faded");*/
+
+var pinMain = document.querySelector(".map__pin--main");
+pinMain.addEventListener("mouseup", function() {
+  var map = document.querySelector(".map");
+  map.classList.remove("map--faded");
+
+  var adForm = document.querySelector(".ad-form");
+  adForm.classList.remove("ad-form--disabled");
+
+  var fieldSets = adForm.querySelectorAll(".ad-form__element");
+  for (var i = 0; i < fieldSets.length; ++i)
+  {
+    fieldSets[i].disabled = false;
+  }
+
+  var adFormHeader = adForm.querySelector(".ad-form-header");
+  adFormHeader.disabled = false;
+});
